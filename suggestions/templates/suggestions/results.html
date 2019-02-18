@@ -1,0 +1,7 @@
+<h1>{{ sug.sugg_text }}</h1>
+
+<ul>
+{% for choice in sug.choice_set.all %}
+    <li>{{ choice.choice_text }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
